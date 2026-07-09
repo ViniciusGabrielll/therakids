@@ -1,0 +1,43 @@
+:root {
+  --primary-background-color: #FEFCFA;
+  --secondary-background-color: #FCF6F3;
+  --text-color: #4A3B36;
+  --primary-color: #B44C43;
+  --additional-color: #ABCF60;
+  --default-padding: 8vw;
+  --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-background-color);
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5vw;
+}
+
+h2 {
+  font-size: 1.8vw;
+}
+
+h3 {
+  font-size: 1vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+p { 
+  font-size: 1vw;
+}

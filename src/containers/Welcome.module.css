@@ -1,0 +1,141 @@
+.logo {
+    width: 200px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-background-color);
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+    padding-bottom: 15vw;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin: 20px;
+}
+
+.secondTitle {
+    margin: 20px;
+}
+
+.description {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px;
+}
+
+.cardSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--primary-background-color);
+    width: 38vw;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    transition: 0.2s;
+    position: relative;
+}
+
+.cardImage {
+    width: 40%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.cardContent {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.contactInfo {
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contactInfo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactInfo a h3 {
+    font-size: 0.8vw;
+}
+
+.cardLink {
+    position: relative;
+    margin-top: auto;
+
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.cardLink div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    width: 4vw;
+    height: 100%;
+
+    transition: 0.2s;
+}
+
+.cardLink:hover div {
+    width: 5vw;
+    font-weight: bold;
+}
+
+
+.cardLink p {
+    color: var(--primary-background-color);
+}
+
+.localization {
+    display: flex;
+    gap: 10px;
+}
+
+.localization img {
+    width: 1.5vw;
+}
+
+.clinic {
+    position: absolute;
+    left: -3vw;
+    top: 3vw;
+    width: 6vw;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 5px var(--primary-background-color) solid;
+}
+
+.clinic img {
+    width: 3vw;
+}
