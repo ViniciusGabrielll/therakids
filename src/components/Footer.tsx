@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css";
-import logo from "../../public/logos/whiteLogo.svg"
+import logo from "../assets/logos/whiteLogo.svg"
 
-import footerDecoration from "../../public/decorations/footer.svg"
+import footerDecoration from "../assets/decorations/footer.svg"
 
 import type { ReactNode } from "react";
 

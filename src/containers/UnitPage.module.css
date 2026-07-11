@@ -1,0 +1,70 @@
+.header {
+    display: flex;
+    background-color: var(--secondary-background-color);
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+    height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.header nav a {
+    color: var(--text-color);
+    font-weight: bold;
+    transition: 0.2s;
+    border-bottom: 2px var(--secondary-background-color) solid;
+}
+
+.header nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px var(--primary-color) solid;
+}
+
+.hero {
+    background-color: var(--secondary-background-color);
+    
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+    
+    display: flex;
+
+    height: 85vh;
+    gap: 10vw;
+}
+
+.heroContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    position: relative;
+    gap: 2vh;
+}
+
+.heroImgContainer {
+    flex: 1;
+}
+
+.heroImgContainer img {
+    width: 100%;
+}
+
+.btnLinkContainer {
+    margin-bottom: 3vh;
+}
+
+.title {
+    font-size: 4vw;
+}
+
+.heroBtns {
+    display: flex;
+    gap: 1vw;
+    margin-top: 3vh;
+}

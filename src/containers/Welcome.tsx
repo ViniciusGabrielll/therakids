@@ -1,15 +1,17 @@
 import styles from "./Welcome.module.css";
 
-import logo from "../../public/logos/logo.svg"
+import logo from "../assets/logos/logo.svg"
 
-import redWhatsapp from "../../public/icons/red/whatsapp.svg"
-import redInstagram from "../../public/icons/red/instagram.svg"
-import redMaps from "../../public/Icons/red/maps.svg"
-import greenWhatsapp from "../../public/icons/green/whatsapp.svg"
-import greenInstagram from "../../public/icons/green/instagram.svg"
-import greenMaps from "../../public/Icons/green/maps.svg"
+import redWhatsapp from "../assets/icons/red/whatsapp.svg"
+import redInstagram from "../assets/icons/red/instagram.svg"
+import redMaps from "../assets/icons/red/maps.svg"
+import greenWhatsapp from "../assets/icons/green/whatsapp.svg"
+import greenInstagram from "../assets/icons/green/instagram.svg"
+import greenMaps from "../assets/icons/green/maps.svg"
+import unitFlores from "../assets/images/unitFlores.svg"
+import unitDomPedro1 from "../assets/images/unitDomPedro1.svg"
 
-import clinic from "../../public/Icons/clinic.svg"
+import clinic from "../assets/icons/clinic.svg"
 import Footer from "../components/Footer";
 
 export default function Welcome() {
@@ -28,7 +30,7 @@ export default function Welcome() {
                 <section className={styles.cardSection}>
 
                     <div className={styles.card}>
-                        <div style={{ backgroundImage: "url(../../public/unidadeFlores.svg)" }} className={styles.cardImage} />
+                        <div style={{ backgroundImage: `url(${unitFlores})` }} className={styles.cardImage} />
                         <div className={styles.cardContent}>
                             <h2 style={{ color: "var(--primary-color)" }}>Unidade Flores</h2>
                             <div className={styles.localization}>
@@ -59,7 +61,7 @@ export default function Welcome() {
                     </div>
 
                     <div className={styles.card}>
-                        <div style={{ backgroundImage: "url(../../public/unidadeDomPedro1.svg)" }} className={styles.cardImage} />
+                        <div style={{ backgroundImage: `url(${unitDomPedro1})` }} className={styles.cardImage} />
                         <div className={styles.cardContent}>
                             <h2 style={{ color: "var(--additional-color)" }}>Unidade Dom Pedro I</h2>
                             <div className={styles.localization}>
@@ -76,7 +78,7 @@ export default function Welcome() {
                                     <h3>@therakids_unidade_dom_pedro1</h3>
                                 </a>
                             </div>
-                            <a href="/unidades/dom-pedro-i" className={styles.cardLink} style={{ backgroundColor: "var(--additional-color)" }}>
+                            <a href="/unidades/dom_pedro_1" className={styles.cardLink} style={{ backgroundColor: "var(--additional-color)" }}>
                                 <p>Acessar Unidade Dom Pedro I</p>
                                 <div style={{ backgroundColor: "color-mix(in srgb, var(--additional-color) 80%, white)" }}>
                                     <p>{">"}</p>
