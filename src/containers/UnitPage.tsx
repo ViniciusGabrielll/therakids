@@ -11,6 +11,7 @@ import redWhatsappIcon from "../assets/icons/red/whatsapp.svg";
 import returnIcon from "../assets/icons/return.svg";
 
 import ButtonLink from "../components/ButtonLink";
+import CardService from "../components/CardService";
 
 export default function UnitPage() {
     const { slug } = useParams();
@@ -57,7 +58,7 @@ export default function UnitPage() {
 
                     <h1 className={styles.title}>Cuidar hoje, <span style={{ color: "var(--primary-color)" }}>transformar</span> amanhã.</h1>
 
-                    <h2>Centro de Desenvolvimento Infantil em {unit.name} - Manaus</h2>
+                    <h3>Centro de Desenvolvimento Infantil em {unit.name} - Manaus</h3>
                     <div className={styles.heroBtns}>
                         <ButtonLink
                             href="#especialidades"
@@ -83,30 +84,52 @@ export default function UnitPage() {
                 </div>
             </article>
 
-            <section className={styles.contact}>
-                <h2>Contato</h2>
 
-                <p>{unit.phone}</p>
+            <article className={styles.services}>
+                <h2>Nossos <span style={{ color: "var(--primary-color)" }}>Atendimentos</span></h2>
 
-                <a href={unit.whatsapp}>
-                    WhatsApp
-                </a>
+                <div className={styles.cardsContainer}>
+                    {unit.services.map((service, index) => (
+                        <CardService
+                            key={index}
+                            title={service.title}
+                            description={service.description}
+                            differential1={service.differential1}
+                            differential2={service.differential2}
+                            differential3={service.differential3}
+                            differential4={service.differential4}
+                            primaryColor={service.primaryColor}
+                            backgroundColor={service.backgroundColor}
+                            unitWhatsApp={unit.whatsapp}
+                            icon={service.icon}
+                            image={service.image}
+                        />
+                    ))}
+                </div>
+            </article>
 
-                <a href={unit.instagram}>
-                    Instagram
-                </a>
+            <article className={styles.aboutUs}>
+                <img src="" alt="Imagem da unidade" />
 
-                <p>{unit.address}</p>
-            </section>
+                <div>
+                    <div>
+                        <h3>SOBRE NÓS</h3>
+                        <h2>Cada criança é única. Cada plano também.</h2>
+                    </div>
+                    <p>Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre
+                        Sobre Sobre Sobre Sobre
+                        Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre
+                        Sobre Sobre Sobre Sobre </p>
 
-            {/* <section className={styles.services}>
-                {unit.services.map(service => (
-                    <CardService
-                        key={service}
-                        title={service}
+                    <ButtonLink
+                        href="/"
+                        text="Entrar em contato"
+                        backgroundColor=""
+                        borderColor="var(--primary-color)"
+                        textColor="var(--primary-color)"
                     />
-                ))}
-            </section> */}
+                </div>
+            </article>
 
         </>
     );

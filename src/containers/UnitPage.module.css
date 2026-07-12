@@ -28,10 +28,10 @@
 
 .hero {
     background-color: var(--secondary-background-color);
-    
+
     padding-left: var(--default-padding);
     padding-right: var(--default-padding);
-    
+
     display: flex;
 
     height: 85vh;
@@ -67,4 +67,30 @@
     display: flex;
     gap: 1vw;
     margin-top: 3vh;
+}
+
+.services {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: var(--primary-background-color);
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services h2 {
+    font-size: 2.5vw;
+    padding-bottom: 5vh;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+}
+
+.aboutUs {
+    
 }

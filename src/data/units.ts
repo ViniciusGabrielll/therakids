@@ -1,3 +1,8 @@
+import IconAvaliaçãoPsicologica from "../assets/services/IconAvaliaçãoPsicologica.svg";
+import iconPsicologia from "../assets/services/iconPsicologia.svg";
+import iconFisioterapia from "../assets/services/iconFisioterapia.svg";
+import ImageAvaliaçãoPsicologica from "../assets/services/ImageAvaliaçãoPsicologica.png";
+
 export const units = {
     flores: {
         slug: "flores",
@@ -15,9 +20,43 @@ export const units = {
         address: "Rua Barão de Surui, 313",
 
         services: [
-            "Psicologia",
-            "Fonoaudiologia",
-            "Terapia Ocupacional"
+            {
+                icon: IconAvaliaçãoPsicologica,
+                title: "Avaliação Neuropsicológica",
+                description: "Investigação completa das funções cognitivas emocionais e comportamentais para compreender o desenvolvimento da criança.",
+
+                differential1: "Atenção e memória",
+                differential2: "Linguagem e aprendizagem",
+                differential3: "Funções executivas",
+                differential4: "Raciocínio e resolução de problemas",
+
+                primaryColor: "#AD73E6",
+                backgroundColor: "#F8F1FF",
+
+                image: ImageAvaliaçãoPsicologica
+            },
+            {
+                icon: iconPsicologia,
+                title: "Psicologia",
+                description: "Apoio emocional e comportamental para promover o bem-estar e o desenvolvimento saudável.",
+                differential1: "Acolhimento e escuta",
+                differential2: "Regulação emocional",
+                differential3: "Orientação para famílias",
+                differential4: "Intervenções personalizadas",
+                primaryColor: "#ABCF60",
+                backgroundColor: "#FAFFF0",
+            },
+            {
+                icon: iconFisioterapia,
+                title: "Fisioterapia",
+                description: "Intervenções que promovem o desenvolvimento motor, autonomia e qualidade de vida.",
+                differential1: "Desenvolvimento motor",
+                differential2: "Coordenação e equilíbrio",
+                differential3: "Fortalecimento muscular",
+                differential4: "Estimulação psicomotora",
+                primaryColor: "#5F7FFF",
+                backgroundColor: "#F3F5F9",
+            }
         ]
     },
 
@@ -39,9 +78,7 @@ export const units = {
         address: "Rua Barão de Surui, 313",
 
         services: [
-            "Psicologia",
-            "Fonoaudiologia",
-            "Terapia Ocupacional"
+
         ]
     }
 }
