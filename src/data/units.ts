@@ -2,6 +2,7 @@ import IconAvaliaçãoPsicologica from "../assets/services/IconAvaliaçãoPsicol
 import iconPsicologia from "../assets/services/iconPsicologia.svg";
 import iconFisioterapia from "../assets/services/iconFisioterapia.svg";
 import ImageAvaliaçãoPsicologica from "../assets/services/ImageAvaliaçãoPsicologica.png";
+import sobreFlores from "../assets/images/SobreFlores.png";
 
 export const units = {
     flores: {
@@ -17,7 +18,10 @@ export const units = {
 
         instagram: "https://instagram.com/therakids_unidade_flores",
 
-        address: "Rua Barão de Surui, 313",
+        address: "R. Barão de Suruí, 313 - Flores, Manaus - AM, 69058-260",
+        BusinessHours: "Sem Informações",
+        aboutImg: sobreFlores,
+        aboutText: "Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre Sobre Sobre Sobre SobreSobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre ",
 
         services: [
             {
@@ -65,11 +69,15 @@ export const units = {
 
         name: "Dom Pedro I",
 
-        // heroImage: heroFlores,
+        aboutImg: sobreFlores,
+        aboutText: "Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre Sobre Sobre Sobre SobreSobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre ",
+
 
         description: "Texto da unidade Flores.",
 
         phone: "(92) 9 9333-5257",
+
+        BusinessHours: "Sem Informações",
 
         whatsapp: "https://wa.me/5592993335257",
 
