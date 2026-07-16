@@ -22,7 +22,7 @@ export const units = {
         BusinessHours: "Sem Informações",
         aboutImg: sobreFlores,
         aboutText: "Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre Sobre Sobre Sobre SobreSobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre  Sobre Sobre Sobre Sobre Sobre Sobre Sobre Sobre ",
-
+        mapCode: "https://www.google.com/maps/embed?pb=!4v1784156966526!6m8!1m7!1seCviGf9ljUNp8avwajhDBw!2m2!1d-3.0483543532707!2d-59.99559804376651!3f11.245113!4f0!5f0.7820865974627469",
         services: [
             {
                 icon: IconAvaliaçãoPsicologica,
@@ -85,6 +85,7 @@ export const units = {
 
         address: "Rua Barão de Surui, 313",
 
+        mapCode: "https://www.google.com/maps/embed?pb=!4v1784156966526!6m8!1m7!1seCviGf9ljUNp8avwajhDBw!2m2!1d-3.0483543532707!2d-59.99559804376651!3f11.245113!4f0!5f0.7820865974627469",
         services: [
 
         ]
