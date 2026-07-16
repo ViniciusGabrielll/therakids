@@ -131,7 +131,7 @@ export default function UnitPage() {
                             image={service.image}
                         />
                     ))}
-                </div>
+                </div>  
             </article>
 
             <article id="sobre" className={styles.aboutUs}>
