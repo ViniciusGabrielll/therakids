@@ -21,7 +21,7 @@ export default function ButtonLink({
 }: ButtonLinkProps) {
   return (
     <a
-    href={href}
+      href={href}
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
       className={styles.button}
@@ -31,7 +31,7 @@ export default function ButtonLink({
       }}
     >
       {icon && <img src={icon} alt="" className={styles.icon} />}
-      <span style={{color: textColor}}>{text}</span>
+      <span style={{ color: textColor }}>{text}</span>
 
     </a>
   );

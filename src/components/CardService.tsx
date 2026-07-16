@@ -51,7 +51,7 @@ export default function CardService({
                     </div>
                     <div className={styles.buttonContainer}>
                         <ButtonLink
-                            href={unitWhatsApp}
+                            href={`${unitWhatsApp}?text=Fiquei interessado no serviço de ${title} para o meu filho.`}
                             target="_blank"
                             text="Agendar pelo WhatsApp"
                             icon={whatsappIcon}

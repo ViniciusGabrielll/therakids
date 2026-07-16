@@ -21,9 +21,26 @@ import momAndDaughterContact from "../assets/decorations/mom&DaughterContact.png
 import ButtonLink from "../components/ButtonLink";
 import CardService from "../components/CardService";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 export default function UnitPage() {
+
     const { slug } = useParams();
+
+    const [responsavel, setResponsavel] = useState("");
+    const [crianca, setCrianca] = useState("");
+    const [dia, setDia] = useState("");
+    const [mes, setMes] = useState("janeiro");
+    const [ano, setAno] = useState("");
+    const [descricao, setDescricao] = useState("");
+
+    const mensagem = encodeURIComponent(
+        "Olá! Vim através do site.\n\n" +
+        `*Nome do responsável:* ${responsavel}\n` +
+        `*Nome da criança:* ${crianca}\n\n` +
+        `*Data de nascimento:* ${dia}/${mes}/${ano}\n\n` +
+        `*O que procura:*\n${descricao || "Não informado"}`
+    );
 
     const unit = Object.values(units).find(
         u => u.slug === slug
@@ -216,12 +233,17 @@ export default function UnitPage() {
 
                     <div>
                         <label className={styles.inputLabel}>Nome do Responsável <span style={{ color: "var(--primary-color)" }}>*</span></label>
-                        <input type="text"></input>
+                        <input type="text" value={responsavel}
+                            onChange={(e) => setResponsavel(e.target.value)}></input>
                     </div>
 
                     <div>
                         <label className={styles.inputLabel}>Nome da Criança <span style={{ color: "var(--primary-color)" }}>*</span></label>
-                        <input type="text"></input>
+                        <input
+                            type="text"
+                            value={crianca}
+                            onChange={(e) => setCrianca(e.target.value)}
+                        />
                     </div>
 
                     <div className={styles.formDateContainer}>
@@ -229,12 +251,17 @@ export default function UnitPage() {
                         <div className={styles.formDate}>
                             <div>
                                 <label className={styles.inputLabel}>Dia</label>
-                                <input type="number"></input>
+                                <input
+                                    type="number"
+                                    value={dia}
+                                    onChange={(e) => setDia(e.target.value)}
+                                />
                             </div>
 
                             <div>
                                 <label className={styles.inputLabel}>Mês</label>
-                                <select>
+                                <select value={mes}
+                                    onChange={(e) => setMes(e.target.value)}>
                                     <option value="janeiro">Janeiro</option>
                                     <option value="fevereiro">Fevereiro</option>
                                     <option value="março">Março</option>
@@ -252,18 +279,22 @@ export default function UnitPage() {
 
                             <div>
                                 <label className={styles.inputLabel}>Ano</label>
-                                <input type="number"></input>
+                                <input type="number"
+                                    value={ano}
+                                    onChange={(e) => setAno(e.target.value)}></input>
                             </div>
                         </div>
                     </div>
 
                     <div>
                         <label className={styles.inputLabel}>Fale um pouco sobre o que procura (opcional)</label>
-                        <input type="text"></input>
+                        <input type="text"
+                            value={descricao}
+                            onChange={(e) => setDescricao(e.target.value)}></input>
                     </div>
 
                     <ButtonLink
-                        href="#contato"
+                        href={`${unit.whatsapp}?text=${mensagem}`}
                         text="Entrar em contato"
                         backgroundColor="var(--primary-color)"
                         borderColor="var(--primary-color)"
@@ -296,8 +327,10 @@ export default function UnitPage() {
                 <section>
                     <h4>Navegação</h4>
 
-                    <a href="/unidades/flores">Unidade Flores</a>
-                    <a href="/unidades/dom-pedro-i">Unidade Dom Pedro I</a>
+                    <a href="#inicio">Início</a>
+                    <a href="#especialidades">Especialidades</a>
+                    <a href="#sobre">Sobre nós</a>
+                    <a href="#contato">Contato</a>
                 </section>
 
                 <section>
@@ -332,7 +365,9 @@ export default function UnitPage() {
                     </a>
                 </section>
 
-                <section></section>
+                <section>
+                    <iframe src={unit.mapCode}></iframe>
+                </section>
             </Footer>
         </>
     );
