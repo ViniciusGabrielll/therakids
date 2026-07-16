@@ -21,7 +21,8 @@ import momAndDaughterContact from "../assets/decorations/mom&DaughterContact.png
 import ButtonLink from "../components/ButtonLink";
 import CardService from "../components/CardService";
 import Footer from "../components/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Preloader from "../components/Preloader";
 
 export default function UnitPage() {
 
@@ -48,8 +49,26 @@ export default function UnitPage() {
 
     if (!unit) return <h1>Unidade não encontrada</h1>;
 
+    const [mounted, setMounted] = useState(true);
+    const [hide, setHide] = useState(false);
+
+    useEffect(() => {
+        const timer1 = setTimeout(() => {
+            setHide(true);
+        }, 1500);
+
+        const timer2 = setTimeout(() => {
+            setMounted(false);
+        }, 2000);
+
+        return () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+        };
+    }, []);
     return (
         <>
+            {mounted && <Preloader hide={hide} />}
             <header className={styles.header}>
                 <img src={logo} alt={unit.name} />
                 <nav>
@@ -131,7 +150,7 @@ export default function UnitPage() {
                             image={service.image}
                         />
                     ))}
-                </div>  
+                </div>
             </article>
 
             <article id="sobre" className={styles.aboutUs}>

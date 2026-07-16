@@ -13,10 +13,33 @@ import unitDomPedro1 from "../assets/images/unitDomPedro1.svg"
 
 import clinic from "../assets/icons/clinic.svg"
 import Footer from "../components/Footer";
+import Preloader from "../components/Preloader";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Welcome() {
+
+    const [mounted, setMounted] = useState(true);
+    const [hide, setHide] = useState(false);
+
+    useEffect(() => {
+        const timer1 = setTimeout(() => {
+            setHide(true);
+        }, 1500);
+
+        const timer2 = setTimeout(() => {
+            setMounted(false);
+        }, 2000);
+
+        return () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+        };
+    }, []);
+
     return (
         <>
+            {mounted && <Preloader hide={hide} />}
             <article className={styles.welcome}>
                 <section className={styles.hero}>
                     <img src={logo} alt="Logo" className={styles.logo} />
@@ -47,12 +70,12 @@ export default function Welcome() {
                                     <h3>@therakids_unidade_flores</h3>
                                 </a>
                             </div>
-                            <a href="/unidades/flores" className={styles.cardLink} style={{ backgroundColor: "var(--primary-color)" }}>
+                            <Link to="/unidades/flores" className={styles.cardLink} style={{ backgroundColor: "var(--primary-color)" }}>
                                 <p>Acessar Unidade Flores</p>
                                 <div style={{ backgroundColor: "color-mix(in srgb, var(--primary-color) 80%, white)" }}>
                                     <p>{">"}</p>
                                 </div>
-                            </a>
+                            </Link>
 
                             <div className={styles.clinic} style={{ backgroundColor: "var(--primary-color)" }}>
                                 <img src={clinic} alt="clínica" />
@@ -78,12 +101,12 @@ export default function Welcome() {
                                     <h3>@therakids_unidade_dom_pedro1</h3>
                                 </a>
                             </div>
-                            <a href="/unidades/dom_pedro_1" className={styles.cardLink} style={{ backgroundColor: "var(--additional-color)" }}>
+                            <Link to="/unidades/dom_pedro_1" className={styles.cardLink} style={{ backgroundColor: "var(--additional-color)" }}>
                                 <p>Acessar Unidade Dom Pedro I</p>
                                 <div style={{ backgroundColor: "color-mix(in srgb, var(--additional-color) 80%, white)" }}>
                                     <p>{">"}</p>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
 
                         <div className={styles.clinic} style={{ backgroundColor: "var(--additional-color)" }}>
