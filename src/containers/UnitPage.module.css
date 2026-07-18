@@ -1,318 +1,509 @@
+.header {
+    display: flex;
+    background-color: var(--secondary-background-color);
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+    height: 15vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.header nav a {
+    color: var(--text-color);
+    font-weight: bold;
+    transition: 0.2s;
+    border-bottom: 2px var(--secondary-background-color) solid;
+}
+
+.header nav a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px var(--primary-color) solid;
+}
+
+.hero {
+    background-color: var(--secondary-background-color);
+
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+
+    display: flex;
+
+    height: 85vh;
+    gap: 10vw;
+}
+
+.heroContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    position: relative;
+    gap: 2vh;
+}
+
+.heroImgContainer {
+    flex: 1;
+}
+
+.heroImgContainer img {
+    width: 100%;
+}
+
+.btnLinkContainer {
+    margin-bottom: 3vh;
+}
+
+.title {
+    font-size: 4vw;
+}
+
+.heroBtns {
+    display: flex;
+    gap: 1vw;
+    margin-top: 3vh;
+}
+
+.services {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: var(--primary-background-color);
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.services h2 {
+    font-size: 2.5vw;
+    padding-bottom: 5vh;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+}
+
+.aboutUs {
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+}
+
+.aboutUs div {
+    flex: 1;
+}
+
+.aboutUsImg {
+    width: 100%;
+}
+
+.aboutUsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.differentialContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.differentialCardsContainer {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.differentialCard {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    flex: 1;
+}
+
+.differentialCard img {
+    width: 5vw;
+}
+
+.differentialCard h4 {
+    color: var(--text-color);
+    font-size: 1vw;
+}
+
+.differentialCard p {
+    font-size: 0.9vw;
+}
+
+.contactContainer {
+    display: flex;
+    margin-left: var(--default-padding);
+    margin-right: var(--default-padding);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+.contactContainer .contactContent,
+.contactForm {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contactContent {
+    position: relative;
+    padding: 5vw;
+    border-radius: 20px 0px 0px 20px;
+    background-color: var(--secondary-background-color);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.contactCardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.contactCard {
+    display: flex;
+    gap: 0.5vw;
+    height: 8vh;
+    width: 20vw;
+}
+
+.contactCard img {
+    height: auto;
+}
+
+.contactCard div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5vh;
+}
+
+.contactCard div h3 {
+    font-size: 1vw;
+    color: var(--text-color);
+}
+
+.contactCard div h4 {
+    font-size: 0.8vw;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+.momAndDaughterContact {
+    position: absolute;
+    right: 2vw;
+    bottom: 2vh;
+    width: 15vw;
+}
+
+
+.contactForm {
+    background-color: white;
+    flex: 1;
+    border-radius: 0px 20px 20px 0px;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 3vh;
+}
+
+.contactForm h4 {
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 1vw;
+}
+
+.contactForm input,
+select {
+    width: 100%;
+    height: 5vh;
+    border-radius: 10px;
+    border: var(--text-color) 1px solid;
+    opacity: 0.6;
+    outline: none;
+    padding-left: 1vw;
+
+}
+
+.contactForm input:focus {
+    border: var(--text-color) 2px solid;
+    opacity: 1;
+    outline: none;
+}
+
+.contactForm div {
+    position: relative;
+}
+
+.inputLabel {
+    background-color: white;
+    font-size: 0.8vw;
+    position: absolute;
+    top: -1vh;
+    left: 1vh;
+    z-index: 1;
+}
+
+.formDateContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.formDateLabel {
+    position: static;
+    color: var(--text-color);
+    font-size: 0.8vw;
+}
+
+.formDate {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+}
+
+.mapsContainer {
+    margin-left: var(--default-padding);
+    margin-right: var(--default-padding);
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+    margin-bottom: 30vh;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 20px;
+}
+
+.iframe {
+    border-radius: 20px 0px 0px 20px;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mapsContent {
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+}
+
+.mapsContent h4 {
+    color: var(--text-color);
+}
+
+@media (max-width: 800px) {
+
+    /* Header */
+
     .header {
-        display: flex;
-        background-color: var(--secondary-background-color);
-        padding-left: var(--default-padding);
-        padding-right: var(--default-padding);
-        height: 15vh;
-        align-items: center;
-        justify-content: space-between;
+        height: auto;
+        padding: 20px 6vw;
+        flex-direction: column;
+        gap: 20px;
     }
 
     .header nav {
-        display: flex;
-        gap: 2vw;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 
-    .header nav a {
-        color: var(--text-color);
-        font-weight: bold;
-        transition: 0.2s;
-        border-bottom: 2px var(--secondary-background-color) solid;
-    }
-
-    .header nav a:hover {
-        color: var(--primary-color);
-        border-bottom: 2px var(--primary-color) solid;
-    }
+    /* Hero */
 
     .hero {
-        background-color: var(--secondary-background-color);
-
-        padding-left: var(--default-padding);
-        padding-right: var(--default-padding);
-
-        display: flex;
-
-        height: 85vh;
-        gap: 10vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 60px 6vw;
+        gap: 40px;
     }
 
     .heroContent {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding-top: 5vh;
-        position: relative;
-        gap: 2vh;
+        align-items: center;
+        padding-top: 0;
     }
 
-    .heroImgContainer {
-        flex: 1;
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .heroBtns {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .heroBtns a {
+        width: 100%;
     }
 
     .heroImgContainer img {
         width: 100%;
+        max-width: 400px;
     }
 
-    .btnLinkContainer {
-        margin-bottom: 3vh;
-    }
-
-    .title {
-        font-size: 4vw;
-    }
-
-    .heroBtns {
-        display: flex;
-        gap: 1vw;
-        margin-top: 3vh;
-    }
+    /* Serviços */
 
     .services {
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-        background-color: var(--primary-background-color);
-        padding-left: var(--default-padding);
-        padding-right: var(--default-padding);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        padding: 70px 6vw;
     }
 
     .services h2 {
-        font-size: 2.5vw;
-        padding-bottom: 5vh;
+        font-size: 2rem;
+        text-align: center;
     }
 
     .cardsContainer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2vw;
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
+
+    /* Sobre */
 
     .aboutUs {
-        padding-left: var(--default-padding);
-        padding-right: var(--default-padding);
-
-        display: flex;
-        gap: 5vw;
-        align-items: center;
-    }
-
-    .aboutUs div {
-        flex: 1;
-    }
-
-    .aboutUsImg {
-        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 70px 6vw;
     }
 
     .aboutUsContent {
-        display: flex;
-        flex-direction: column;
-        gap: 5vh;
+        align-items: center;
+        gap: 25px;
     }
 
+    /* Diferenciais */
+
     .differentialContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-left: var(--default-padding);
-        padding-right: var(--default-padding);
-        padding-top: 10vh;
-        padding-bottom: 10vh;
+        padding: 70px 6vw;
     }
 
     .differentialCardsContainer {
-        margin-top: 5vh;
-        display: flex;
-        justify-content: space-between;
-        gap: 2vw;
+        flex-direction: column;
+        gap: 25px;
     }
 
     .differentialCard {
-        display: flex;
-        gap: 1vw;
-        align-items: center;
-        flex: 1;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
     }
 
     .differentialCard img {
-        width: 5vw;
+        width: 60px;
     }
 
     .differentialCard h4 {
-        color: var(--text-color);
-        font-size: 1vw;
+        font-size: 1.2rem;
     }
 
     .differentialCard p {
-        font-size: 0.9vw;
+        font-size: 1rem;
     }
+
+    /* Contato */
 
     .contactContainer {
-        display: flex;
-        margin-left: var(--default-padding);
-        margin-right: var(--default-padding);
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        border-radius: 20px;
+        flex-direction: column;
+        margin: 0 6vw;
     }
 
-    .contactContainer .contactContent,
+    .contactContent,
     .contactForm {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 20px;
+        padding: 35px 25px;
     }
 
     .contactContent {
-        position: relative;
-        padding: 5vw;
-        border-radius: 20px 0px 0px 20px;
-        background-color: var(--secondary-background-color);
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 3vh;
-    }
-
-    .contactCardContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 2vh;
+        padding-bottom: 120px;
     }
 
     .contactCard {
-        display: flex;
-        gap: 0.5vw;
-        height: 8vh;
-        width: 20vw;
-    }
-
-    .contactCard img {
+        width: 100%;
         height: auto;
-    }
-
-    .contactCard div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5vh;
+        gap: 15px;
     }
 
     .contactCard div h3 {
-        font-size: 1vw;
-        color: var(--text-color);
+        font-size: 1rem;
     }
 
     .contactCard div h4 {
-        font-size: 0.8vw;
-        font-weight: normal;
-        color: var(--text-color);
+        font-size: .9rem;
     }
 
     .momAndDaughterContact {
-        position: absolute;
-        right: 2vw;
-        bottom: 2vh;
-        width: 15vw;
-    }
-
-
-    .contactForm {
-        background-color: white;
-        flex: 1;
-        border-radius: 0px 20px 20px 0px;
-        padding: 5vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        gap: 3vh;
+        width: 120px;
+        right: 15px;
+        bottom: 15px;
     }
 
     .contactForm h4 {
-        color: var(--text-color);
-        font-weight: normal;
-        font-size: 1vw;
+        font-size: 1rem;
     }
 
     .contactForm input,
-    select {
-        width: 100%;
-        height: 5vh;
-        border-radius: 10px;
-        border: var(--text-color) 1px solid;
-        opacity: 0.6;
-        outline: none;
-        padding-left: 1vw;
-
+    .contactForm select {
+        height: 50px;
+        padding-left: 15px;
     }
 
-    .contactForm input:focus {
-        border: var(--text-color) 2px solid;
-        opacity: 1;
-        outline: none;
-    }
-
-    .contactForm div {
-        position: relative;
-    }
-
-    .inputLabel {
-        background-color: white;
-        font-size: 0.8vw;
-        position: absolute;
-        top: -1vh;
-        left: 1vh;
-        z-index: 1;
-    }
-
-    .formDateContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 2vh;
-    }
-
+    .inputLabel,
     .formDateLabel {
-        position: static;
-        color: var(--text-color);
-        font-size: 0.8vw;
+        font-size: .85rem;
     }
 
     .formDate {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 2vw;
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
+    /* Maps */
+
     .mapsContainer {
-        margin-left: var(--default-padding);
-        margin-right: var(--default-padding);
-        margin-top: 10vh;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: 50vh;
-        margin-bottom: 30vh;
-        background-color: white;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        border-radius: 20px;
+        margin: 70px 6vw;
+        margin-bottom: 100px;
+        grid-template-columns: 1fr;
+        height: auto;
     }
 
     .iframe {
-        border-radius: 20px 0px 0px 20px;
-        border: none;
-        width: 100%;
-        height: 100%;
+        height: 300px;
+        border-radius: 20px 20px 0 0;
     }
 
     .mapsContent {
-        padding: 5vw;
-        display: flex;
-        flex-direction: column;
-        gap: 5vh;
-        justify-content: center;
+        padding: 35px 25px;
+        text-align: center;
+        gap: 25px;
     }
 
-    .mapsContent h4 {
-        color: var(--text-color);
-    }
+}

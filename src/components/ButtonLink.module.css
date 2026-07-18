@@ -25,3 +25,17 @@
     width: 20px;
     height: 20px;
 }
+
+@media (max-width: 800px) {
+    .button {
+        width: 100%;
+        padding: 14px 24px;
+        border-radius: 12px;
+        font-size: 1rem;
+    }
+
+    .icon {
+        width: 22px;
+        height: 22px;
+    }
+}

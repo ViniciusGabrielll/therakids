@@ -13,7 +13,10 @@
 }
 
 .footer p,
-span, a, h4, h5 {
+span,
+a,
+h4,
+h5 {
     color: var(--primary-background-color);
 }
 
@@ -48,6 +51,39 @@ span, a, h4, h5 {
 .brand img {
     width: 100%;
 }
+
 .content {
     gap: 20px;
+}
+
+@media (max-width: 800px) {
+    .footer {
+        padding: 50px 6vw 30px;
+    }
+
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 30px;
+    }
+
+    .container section {
+        align-items: center;
+        text-align: center;
+    }
+
+    .brand {
+        align-items: center;
+        gap: 15px;
+    }
+
+    .brand img {
+        width: 180px;
+        max-width: 100%;
+    }
+
+    .content {
+        gap: 15px;
+    }
 }
